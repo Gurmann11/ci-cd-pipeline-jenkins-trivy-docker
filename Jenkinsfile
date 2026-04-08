@@ -20,13 +20,14 @@ pipeline {
             }
         }
 
-        stage('Scan Docker Image') {
-            steps {
-                sh '''
-                trivy image -f html -o trivy-report.html $IMAGE_NAME
-                '''
-            }
-        }
+       stage('Scan Docker Image') {
+    steps {
+        sh '''
+        trivy image --format template --template "@contrib/html.tpl" -o trivy-report.html $IMAGE_NAME
+        '''
+    }
+}
+
 
         stage('Publish Report') {
     steps {
