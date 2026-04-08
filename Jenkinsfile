@@ -22,7 +22,19 @@ pipeline {
 
         stage('Scan Docker Image') {
             steps {
-                sh 'trivy image $IMAGE_NAME'
+                sh '''
+                trivy image -f html -o trivy-report.html $IMAGE_NAME
+                '''
+            }
+        }
+
+        stage('Publish Report') {
+            steps {
+                publishHTML([
+                    reportDir: '.',
+                    reportFiles: 'trivy-report.html',
+                    reportName: 'Trivy Security Report'
+                ])
             }
         }
 
