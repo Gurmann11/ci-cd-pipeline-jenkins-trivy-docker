@@ -29,14 +29,18 @@ pipeline {
         }
 
         stage('Publish Report') {
-            steps {
-                publishHTML([
-                    reportDir: '.',
-                    reportFiles: 'trivy-report.html',
-                    reportName: 'Trivy Security Report'
-                ])
-            }
-        }
+    steps {
+        publishHTML(target: [
+            reportDir: '.',
+            reportFiles: 'trivy-report.html',
+            reportName: 'Trivy Security Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true,
+            allowMissing: false
+        ])
+    }
+}
+
 
         stage('Stop Old Container') {
             steps {
