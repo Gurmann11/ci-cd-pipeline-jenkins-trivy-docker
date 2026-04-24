@@ -1,9 +1,13 @@
 # CI/CD Pipeline using Jenkins & Docker
 
-## 📌 Overview
-This project demonstrates how to automate the build and deployment process using Jenkins and Docker.
+This project demonstrates an end-to-end CI/CD pipeline where code pushed to GitHub is automatically built and deployed using Jenkins and Docker.
 
-The goal is to reduce manual effort and ensure consistent deployments.
+It showcases automation of software delivery with minimal manual intervention.    
+
+## ❗ Problem Statement
+
+Manual deployment is time-consuming and error-prone. This project solves that by automating the build and deployment process using CI/CD practices.
+
 
 ---
 
@@ -15,11 +19,13 @@ The goal is to reduce manual effort and ensure consistent deployments.
 
 ---
 
-## 🔄 Workflow
-1. Developer pushes code to GitHub
-2. Jenkins detects changes and triggers a build
-3. Docker image is created
-4. Application is deployed inside a container
+## 🏗️ Architecture
+
+1. Developer pushes code to GitHub  
+2. Jenkins detects changes and triggers the pipeline  
+3. Application is built and Docker image is created  
+4. Trivy scans the Docker image for vulnerabilities  
+5. If no critical issues are found, the container is deployed  
 
 ---
 
