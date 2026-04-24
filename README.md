@@ -84,7 +84,7 @@ I also hardened Jenkins itself — no anonymous access, RBAC enforced with prope
 ## Run it yourself
 
 ```bash
-git clone https://github.com/Gurmann11/devops-project.git
+git clone https://github.com/Gurmann11/ci-cd-pipeline-jenkins-trivy-docker.git
 cd devops-project
 
 # Build the image
