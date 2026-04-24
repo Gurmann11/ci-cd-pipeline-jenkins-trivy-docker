@@ -28,6 +28,22 @@ Manual deployment is time-consuming and error-prone. This project solves that by
 5. If no critical issues are found, the container is deployed  
 
 ---
+## ▶️ How to Run
+
+1. Clone the repository  
+   git clone https://github.com/Gurmann11/ci-cd-pipeline-jenkins-docker.git
+
+2. Navigate to project directory  
+   cd ci-cd-pipeline-jenkins-docker
+
+3. Build Docker image  
+   docker build -t devops-app .
+
+4. Run Docker container  
+   docker run -d -p 5000:5000 devops-app
+
+5. Access the application  
+   Open http://localhost:5000 in your browser
 
 ## 📸 Screenshots
 
@@ -52,7 +68,7 @@ Manual deployment is time-consuming and error-prone. This project solves that by
 
 ## 📂 Project Structure
 
-- Jenkinsfile → Defines the CI/CD pipeline stages  
+- Jenkinsfile → Defines the CI/CD pipeline stages and trivy
 - Dockerfile → Builds the application container  
 - app/ → Contains application source code  
 - README.md → Project documentation  
