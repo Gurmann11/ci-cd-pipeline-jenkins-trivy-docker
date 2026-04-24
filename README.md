@@ -24,8 +24,16 @@ The goal is to reduce manual effort and ensure consistent deployments.
 ---
 
 ## 📸 Screenshots
-  Screenshots of the Jenkins pipeline and 
-  Docker container execution are included below.
+
+### Jenkins Pipeline
+![Jenkins Pipeline](pipeline.png)
+
+### Build Logs (Console Output)
+![Build Logs](build-logs.png)
+
+### Docker Container Running
+![Docker Container](docker-container.png)
+
 
 ---
 
